@@ -2,8 +2,8 @@
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-from data_analice import parse_file, group_by_n
-from graphics import graphic_bar
+from data_analice import parse_file, group_by_n, parse_file_des
+from graphics import graphic_bar, graphic_bar_des
 
 
 def print_hi(name):
@@ -16,6 +16,10 @@ if __name__ == '__main__':
     values = group_by_n()
     for value in values:
         graphic_bar(value)
+
+    values = parse_file_des()
+    for i, value in enumerate(values):
+        graphic_bar_des(value, i)
 
     print_hi('PyCharm')
 

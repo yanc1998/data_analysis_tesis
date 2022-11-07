@@ -1,4 +1,4 @@
-from os import getcwd
+from os import getcwd, listdir
 
 
 def read(path: str):
@@ -6,6 +6,11 @@ def read(path: str):
         lines = f.readlines()
 
     return lines
+
+
+def read_directory(path: str):
+    list_dirs = listdir(path)
+    return list(filter(lambda file: file.endswith('.txt'), list_dirs))
 
 
 def testRead():
