@@ -1,1 +1,1 @@
-from .graphic import graphic_bar, graphic_bar_des
+from .graphic import graphic_bar, graphic_bar_des,plot

@@ -8,6 +8,12 @@ def read(path: str):
     return lines
 
 
+def write(path, data):
+    print(data)
+    with open(path) as f:
+        f.write(data)
+
+
 def read_directory(path: str):
     list_dirs = listdir(path)
     return list(filter(lambda file: file.endswith('.txt'), list_dirs))

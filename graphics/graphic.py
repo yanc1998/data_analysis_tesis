@@ -47,6 +47,20 @@ def graphic_bar(value):
     # plt.show()
 
 
+def plot(value):
+    times = list(map(lambda x: x.time, value.values))
+    counts = list(map(lambda x: x.count, value.values))
+    title = f'Gráfica para n = {value.n} y k = {value.k}'
+    plt.title(title)
+    plt.ylabel('Tiempo en segundos')
+    plt.xlabel('count')
+    plt.plot(counts, times)
+    path = getcwd() + '/output/functions_data/' + title + '.png'
+    plt.savefig(path)
+    plt.close()
+    # plt.show()
+
+
 def graphic_bar_des(value, i):
     times = list(map(lambda x: float(x), value.values))
     counts = list(map(lambda x: x + 1, range(len(value.values))))
